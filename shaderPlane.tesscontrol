@@ -1,0 +1,26 @@
+#version 410 core
+layout(vertices = 3) out;
+
+in vec3 pos[];
+in vec3 norm[];
+in vec2 tex[];
+
+out vec3 tesscontrol_pos[];
+out vec3 tesscontrol_norm[];
+out vec2 tesscontrol_tex[];
+
+uniform float tesslevel;
+
+void main(void)
+{
+    tesscontrol_pos[gl_InvocationID] = pos[gl_InvocationID];
+    tesscontrol_norm[gl_InvocationID] = norm[gl_InvocationID];
+    tesscontrol_tex[gl_InvocationID] = tex[gl_InvocationID];
+
+    gl_TessLevelOuter[0] = tesslevel;
+    gl_TessLevelOuter[1] = tesslevel;
+    gl_TessLevelOuter[2] = tesslevel;
+
+    gl_out[gl_InvocationID].gl_Position = gl_in[gl_InvocationID].gl_Position;
+
+}
