@@ -30,7 +30,10 @@ Rendering of the shadow casting tesselated plane with the teapot normal map used
 7. The space key toggles the triangulation draw call.
 8. Draw the light source.
 
-https://user-images.githubusercontent.com/16291248/211368398-79f7bcf1-b9fb-416a-aae0-0cc7d30b6e41.mp4
+
+
+https://user-images.githubusercontent.com/16291248/211943194-56811d1f-c400-477c-8bdc-16c17aa6d2bb.mp4
+
 
 How to use your implementation
 
